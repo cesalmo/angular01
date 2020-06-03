@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+a{
+    text-decoration: none;
+    padding: 2vw;
+}
+a:hover{
+    background-color: antiquewhite;
+}
+
+nav{
+    width: 100vw;
+    background-color: aqua;
+}
+
+ul{
+    margin: 0;
+    padding: 2vh;
+    display: flex;
+}
+
+body{
+    margin: 0;
+}
+
+li{
+    list-style-type: none;
+    margin: 0 2vw;
+    font-size: 3vh;
+}
