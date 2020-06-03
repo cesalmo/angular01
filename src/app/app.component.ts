@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Mi CV';
+  estilo1: string = "font-size: 4vw";
 }

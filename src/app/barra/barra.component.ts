@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';d
 
 @Component({
   selector: 'app-barra',
@@ -11,5 +11,7 @@ export class BarraComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  onClick(e): void { console.log(e)  }
 
 }
