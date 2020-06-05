@@ -1,13 +1,31 @@
-import { Component, OnInit } from '@angular/core';d
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-barra',
-  templateUrl: './barra.component.html',
-  styleUrls: ['./barra.component.css']
+  template: `
+
+  <nav>
+    <ul>
+        <li>
+            <a href="#aboutMe">{{item}}</a>
+        </li>
+        <li>
+            <a href="#projects">Projects</a>
+        </li>
+        <li>
+            <a href="#CV">CV</a>
+        </li>
+    </ul>
+</nav>
+<input type="button" value="Click me" (click)="onClick($event)">
+`
+
 })
 export class BarraComponent implements OnInit {
 
   constructor() { }
+
+  @Input() item: string
 
   ngOnInit(): void {
   }
