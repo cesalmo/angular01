@@ -26,3 +26,15 @@ li{
     margin: 0 2vw;
     font-size: 3vh;
 }
+
+.cabecera{
+    padding: 4vh;
+}
+.cabecera *{
+    margin: 10px;
+}
+
+li *{
+    margin: 1vh;
+
+}

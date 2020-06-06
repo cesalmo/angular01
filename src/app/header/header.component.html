@@ -1,0 +1,5 @@
+<form class="cabecera">
+    <label for="accion">Tarea</label>
+    <input type="text" id="accion" [(ngModel)]="texto_accion"  [ngModelOptions]="{standalone: true}" />
+    <button (click)="onClick($event)">Añade</button>
+</form>

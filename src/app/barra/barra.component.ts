@@ -1,13 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-barra',
-  template: `
+    selector: 'app-barra',
+    template: `
 
   <nav>
     <ul>
         <li>
-            <a href="#aboutMe">{{item}}</a>
+            <a href="#aboutMe">Home</a>
         </li>
         <li>
             <a href="#projects">Projects</a>
@@ -17,19 +17,15 @@ import { Component, OnInit, Input } from '@angular/core';
         </li>
     </ul>
 </nav>
-<input type="button" value="Click me" (click)="onClick($event)">
 `
 
 })
 export class BarraComponent implements OnInit {
 
-  constructor() { }
 
-  @Input() item: string
+    constructor() { }
 
-  ngOnInit(): void {
-  }
-
-  onClick(e): void { console.log(e)  }
+    ngOnInit(): void {
+    }
 
 }

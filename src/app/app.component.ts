@@ -1,17 +1,24 @@
 import { Component } from '@angular/core';
+import { DatosService } from './datos.service'
 
 @Component({
   selector: 'app-root',
-  // templateUrl: './app.component.html',
-  template: `
-
-  <app-barra [item]="f1"></app-barra>
-  <H2 [style]="estilo1">fin componente app en {{title}}</H2>
-  
-   `
+  templateUrl: './app.component.html',
 })
 export class AppComponent {
-  title = 'Mi CV';
-  estilo1: string = "font-size: 4vw";
-  f1: string = "Home";
+
+  
+ 
+  Tdatos: string[];
+
+  constructor( private datosService: DatosService ){
+
+    this.Tdatos = datosService.Tdatos;
+    
+
+  }
+
+  procesaEmite(e) {
+    console.log(e);
+  }
 }
