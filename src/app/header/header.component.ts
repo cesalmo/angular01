@@ -8,7 +8,7 @@ import { DatosService } from '../datos.service';
 export class HeaderComponent implements OnInit {
   texto_accion: string;
 
-  constructor(private datosService: DatosService) {}
+  constructor(public datosService: DatosService) {}
 
   ngOnInit(): void {}
 
@@ -20,5 +20,11 @@ export class HeaderComponent implements OnInit {
       this.datosService.Tdatos.push(this.texto_accion);
       this.texto_accion = '';
     }
+  }
+
+  onDel(e: MouseEvent, n: number ) {
+    e.preventDefault();
+
+    this.datosService.Tdatos.splice(n, 1);
   }
 }

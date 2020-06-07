@@ -3,3 +3,8 @@
     <input type="text" id="accion" [(ngModel)]="texto_accion"  [ngModelOptions]="{standalone: true}" />
     <button (click)="onClick($event)">Añade</button>
 </form>
+<ul  *ngFor="let dato of this.datosService.Tdatos;index as i">
+    <li>
+        <button (click)="onDel($event, i)">Del</button><span>{{dato}}</span>
+    </li>
+</ul>

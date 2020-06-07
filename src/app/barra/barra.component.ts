@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
   <nav>
     <ul>
         <li>
-            <a href="#aboutMe">Home</a>
+            <a routerLink='/'>Home</a>
         </li>
         <li>
-            <a href="#projects">Projects</a>
+            <a routerLink='/todo'>Todo</a>
         </li>
         <li>
-            <a href="#CV">CV</a>
+            <a routerLink='/LoreIpsum'>LoremIpsum API</a>
         </li>
     </ul>
 </nav>
