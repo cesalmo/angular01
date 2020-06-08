@@ -1,1 +1,6 @@
 <button (click)="onGetData()">GET</button>
+
+<ul *ngFor="let dato of this.datosService.Tdatos ;index as i">
+    <li>{{dato.title}}</li>
+
+</ul>

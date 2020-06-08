@@ -16,9 +16,16 @@ export class LoremIpsumAPIComponent implements OnInit {
 
   onGetData(){
     this.datosService.getLorenIpsum().subscribe(
-      data => console.log('success', data),
+      data => this.processData(data),
       error => console.log('oops', error)
     );
   }
 
+  processData(data){
+    for (var a in data ){ 
+      if ( data[a].userId === 3 ){ 
+        this.datosService.Tdatos.push(data[a])
+      };
+    };
+  };
 }
