@@ -1,6 +1,24 @@
 <button (click)="onGetData()">GET</button>
+<table fd-table>
+    <thead fd-table-header>
+        <tr fd-table-row>
+            <th fd-table-cell>Id</th>
+            <th fd-table-cell>Title</th>
+            <th fd-table-cell>Body</th>
+        </tr>
+    </thead>
+    <tbody fd-table-body>
+        <tr *ngFor="let row of this.datosService.Tplace" fd-table-row>
+            <td fd-table-cell class="fd-has-font-weight-semi">
+                {{row.id}}
+            </td>
+            <td fd-table-cell>
+                {{row.title}}
+            </td>
+            <td fd-table-cell>
+                {{row.body}}
+            </td>
+        </tr>
+    </tbody>
 
-<ul *ngFor="let dato of this.datosService.Tdatos ;index as i">
-    <li>{{dato.title}}</li>
-
-</ul>
+</table>

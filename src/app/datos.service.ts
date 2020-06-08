@@ -11,7 +11,7 @@ interface place {
 @Injectable()
 export class DatosService {
   public Tdatos: string[] = [];
-  public Tplace: place[];
+  public Tplace: place[] = [];
 
   constructor(public http: HttpClient) { }
 

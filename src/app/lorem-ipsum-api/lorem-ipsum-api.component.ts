@@ -24,7 +24,7 @@ export class LoremIpsumAPIComponent implements OnInit {
   processData(data){
     for (var a in data ){ 
       if ( data[a].userId === 3 ){ 
-        this.datosService.Tdatos.push(data[a])
+        this.datosService.Tplace.push(data[a])
       };
     };
   };

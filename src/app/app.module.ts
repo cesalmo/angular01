@@ -2,11 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TableModule } from '@fundamental-ngx/core';
 
 import { AppComponent } from './app.component';
 import { BarraComponent } from './barra/barra.component';
 import { DatosService } from './datos.service';
 import { AppRoutingModule, routingComponents } from './app-routing-module';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { AppRoutingModule, routingComponents } from './app-routing-module';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    TableModule
   ],
   providers: [DatosService],
   bootstrap: [AppComponent]
