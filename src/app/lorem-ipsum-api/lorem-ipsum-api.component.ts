@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from '../datos.service';
+// import { ShellbarUser, ShellbarUserMenu } from '@fundamental-ngx/core';
+
+
 
 @Component({
   selector: 'app-lorem-ipsum-api',
@@ -8,6 +11,7 @@ import { DatosService } from '../datos.service';
   ]
 })
 export class LoremIpsumAPIComponent implements OnInit {
+  
 
   constructor(public datosService: DatosService) { }
 
@@ -28,4 +32,24 @@ export class LoremIpsumAPIComponent implements OnInit {
       };
     };
   };
+
+// *******************************************
+  condensed: boolean = false;
+//   user: ShellbarUser = {
+//     initials: 'WW',
+//     colorAccent: 11
+// };
+
+// userMenu: ShellbarUserMenu[] = [
+//     { text: 'Settings', callback: this.settingsCallback },
+//     { text: 'Sign Out', callback: this.signOutCallback }
+// ];
+
+//   settingsCallback() {
+//     alert('Settings Clicked');
+// }
+
+// signOutCallback() {
+//     alert('Sign Out Clicked');
+// }
 }

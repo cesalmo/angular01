@@ -1,24 +1,68 @@
 <button (click)="onGetData()">GET</button>
-<table fd-table>
-    <thead fd-table-header>
-        <tr fd-table-row>
-            <th fd-table-cell>Id</th>
-            <th fd-table-cell>Title</th>
-            <th fd-table-cell>Body</th>
-        </tr>
-    </thead>
-    <tbody fd-table-body>
-        <tr *ngFor="let row of this.datosService.Tplace" fd-table-row>
-            <td fd-table-cell class="fd-has-font-weight-semi">
-                {{row.id}}
-            </td>
-            <td fd-table-cell>
-                {{row.title}}
-            </td>
-            <td fd-table-cell>
-                {{row.body}}
-            </td>
-        </tr>
-    </tbody>
 
-</table>
+
+<fd-shellbar>
+    <button
+        fd-shellbar-side-nav
+        fd-button
+        [fdType]="'transparent'"
+        [glyph]="'menu2'"
+        (click)="condensed = !condensed"
+    ></button>
+
+    <fd-shellbar-logo>
+        <a href="#" class="fd-shellbar__logo fd-shellbar__logo--image-replaced" aria-label="SAP"></a>
+    </fd-shellbar-logo>
+</fd-shellbar>
+<div class="shellbar-sidenav-content-example">
+    <fd-side-nav [condensed]="condensed">
+        <div fd-side-nav-main>
+            <ul fd-nested-list [textOnly]="false">
+                <li fd-nested-list-item>
+                    <a fd-nested-list-link>
+                        <span fd-nested-list-icon [glyph]="'menu'"></span>
+                        <span fd-nested-list-title>Link 1</span>
+                    </a>
+                </li>
+                <li fd-nested-list-item>
+                    <a fd-nested-list-link>
+                        <span fd-nested-list-icon [glyph]="'home'"></span>
+                        <span fd-nested-list-title>Link 2</span>
+                    </a>
+                </li>
+                <li fd-nested-list-item>
+                    <a fd-nested-list-link>
+                        <span fd-nested-list-icon [glyph]="'settings'"></span>
+                        <span fd-nested-list-title>Link 3</span>
+                    </a>
+                </li>
+                <li fd-nested-list-item>
+                    <a fd-nested-list-link>
+                        <span fd-nested-list-icon [glyph]="'settings'"></span>
+                        <span fd-nested-list-title>Link 4</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div fd-side-nav-utility>
+            <ul fd-nested-list [textOnly]="false">
+                <li fd-nested-list-item>
+                    <a fd-nested-list-link>
+                        <span fd-nested-list-icon [glyph]="'menu'"></span>
+                        <span fd-nested-list-title>Link 1</span>
+                    </a>
+                </li>
+                <li fd-nested-list-item>
+                    <a fd-nested-list-link>
+                        <span fd-nested-list-icon [glyph]="'home'"></span>
+                        <span fd-nested-list-title>Link 2</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </fd-side-nav>
+
+ 
+</div>
+
