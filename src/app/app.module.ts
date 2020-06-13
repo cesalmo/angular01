@@ -1,14 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
+import { BlogCompComponent } from './blog-comp/blog-comp.component';
+import { LessonCompComponent } from './lesson-comp/lesson-comp.component';
+import { E404Component } from './e404/e404.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainNavComponent
+    MainNavComponent,
+    routingComponents
   ],
   imports: [
     BrowserModule,
